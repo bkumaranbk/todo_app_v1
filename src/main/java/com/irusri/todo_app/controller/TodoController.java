@@ -40,6 +40,14 @@ public class TodoController {
         }).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Todo> getTodoById(@PathVariable Long id) {
+        return todoService.getTodoById(id)
+                .map(todo -> ResponseEntity.ok(todo))
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+
     @DeleteMapping("/{id}")
     public void deleteTodoById(@PathVariable Long id) {
         todoService.deleteTodoById(id);
