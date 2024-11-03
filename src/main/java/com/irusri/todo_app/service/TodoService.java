@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -30,4 +31,13 @@ public class TodoService {
     public void deleteTodoById(Long id) {
         todoRepository.deleteById(id);
     }
+
+    public List<Todo> findAll() {
+        return todoRepository.findAll(); // Fetch all Todos
+    }
+
+    public Todo save(Todo todo) {
+        return todoRepository.save(todo); // Save a new or updated Todo
+    }
+
 }
