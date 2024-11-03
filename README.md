@@ -28,5 +28,5 @@ A simple Todo application built with Spring Boot 3 and Java 21. This app allows 
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/bkumaranbk/todo_app_v1/tree/master)
    cd todo-app
